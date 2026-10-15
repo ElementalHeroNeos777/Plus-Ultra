@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b3b">
+<title>ALL MIGHT | Símbolo de la Paz</title>
+<style>
+:root{--blue:#08285b;--blue2:#1261a6;--red:#d92332;--yellow:#ffd447;--white:#f7fbff;--ink:#101a2c;--muted:#b9c9df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#07152c;color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:var(--yellow)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:18px clamp(18px,5vw,72px);background:#061126;border-bottom:3px solid var(--yellow);position:sticky;top:0;z-index:10}
+.logo{font-weight:900;letter-spacing:2px;font-size:1.15rem}.logo span{color:var(--yellow)}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:700;font-size:.88rem;color:#fff}nav a:hover{color:var(--yellow)}
+.hero{min-height:76vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;padding:70px clamp(18px,8vw,120px);overflow:hidden;position:relative;background:radial-gradient(circle at 75% 40%,#164b83 0,#0b2b57 30%,#07152c 68%)}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border:28px solid #ffffff0c;border-radius:50%;right:-90px;top:5%;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}
+.kicker{color:var(--yellow);font-weight:900;letter-spacing:4px;text-transform:uppercase;font-size:.8rem}.hero h1{font-size:clamp(3rem,8vw,7rem);line-height:.9;margin:18px 0;text-transform:uppercase;letter-spacing:-3px}.hero h1 span{color:var(--yellow);display:block;text-shadow:4px 4px 0 var(--red)}.hero p{max-width:620px;color:#d7e4f6;font-size:1.1rem}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:12px 18px;border-radius:4px;text-decoration:none;font-weight:900;border:2px solid var(--yellow);background:var(--yellow);color:#111d34;cursor:pointer}.btn.secondary{background:transparent;color:#fff;border-color:#fff}.btn:hover{transform:translateY(-2px)}
+.hero-art{min-height:410px;display:flex;align-items:center;justify-content:center;position:relative}.sunburst{position:absolute;width:min(33vw,360px);aspect-ratio:1;background:conic-gradient(from 0deg,#ffd447 0 8deg,transparent 8deg 20deg,#ffd447 20deg 28deg,transparent 28deg 40deg);border-radius:50%;opacity:.9;filter:drop-shadow(0 0 30px #ffca3566)}
+.emblem{position:relative;width:min(28vw,270px);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#fff,#dce9f9);border:12px solid var(--yellow);box-shadow:0 0 0 10px var(--red),0 20px 50px #0008;display:grid;place-items:center;transform:rotate(-8deg)}
+.emblem:before{content:"";position:absolute;inset:20px;border:5px solid var(--blue);border-radius:50%}.emblem strong{font-size:clamp(3rem,8vw,6rem);color:var(--blue);font-weight:1000;letter-spacing:-8px;text-shadow:3px 3px var(--yellow);z-index:1}.emblem small{position:absolute;bottom:25px;font-size:.7rem;font-weight:1000;letter-spacing:2px;color:var(--red);z-index:1}
+.section{padding:76px clamp(18px,8vw,120px)}.section.light{background:#f4f7fc;color:var(--ink)}.section.blue{background:#0c2a54}.section-head{max-width:760px;margin-bottom:32px}.section-head .kicker{color:var(--red)}.section h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;margin:8px 0 18px;text-transform:uppercase}.section p{max-width:850px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;background:#fff;border-top:5px solid var(--red);box-shadow:0 10px 28px #10294b14;border-radius:5px}.card:nth-child(2){border-color:var(--blue2)}.card:nth-child(3){border-color:var(--yellow)}.card h3{margin-top:0}.card p{margin-bottom:0;color:#44536b}.quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.quote{padding:26px;border-left:5px solid var(--yellow);background:#ffffff0b;border-radius:4px}.quote blockquote{font-size:1.25rem;font-weight:800;margin:0 0 10px}.quote cite{font-style:normal;color:var(--muted);font-size:.9rem}.note{font-size:.85rem;color:#aebed4}.message{background:linear-gradient(110deg,#d92332,#a70f28);padding:clamp(28px,5vw,55px);border-radius:8px;box-shadow:0 15px 40px #0003}.message h2{margin-top:0}.message p{font-size:1.08rem;max-width:900px}.music-panel{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#fff;color:var(--ink);padding:26px;border-radius:8px}.music-panel p{margin:5px 0;color:#536176}.equalizer{display:flex;align-items:center;gap:5px;height:42px}.equalizer i{display:block;width:6px;height:18px;background:var(--red);border-radius:3px}.equalizer.playing i{animation:beat .65s ease-in-out infinite alternate}.equalizer i:nth-child(2n){animation-delay:.2s}.equalizer i:nth-child(3n){animation-delay:.35s}@keyframes beat{to{height:40px;background:var(--blue2)}}footer{padding:30px clamp(18px,8vw,120px);background:#040c1b;color:#9aabc2;font-size:.88rem}footer strong{color:#fff}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.hero-art{min-height:290px}.sunburst{width:240px}.emblem{width:190px}.cards{grid-template-columns:1fr}.quote-grid{grid-template-columns:1fr}.topbar{position:static;align-items:flex-start;flex-direction:column}nav{gap:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">HERO <span>ARCHIVE</span> / 01</div>
+  <nav aria-label="Navegación principal">
+    <a href="#biografia">Biografía</a><a href="#simbolo">Símbolo de paz</a><a href="#frases">Frases</a><a href="#musica">Música</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <div class="kicker">El héroe que inspira a una generación</div>
+    <h1>All <span>Might</span></h1>
+    <p>Una sonrisa frente al miedo. Una voluntad que no se rinde. Toshinori Yagi convirtió su fuerza en una promesa: que las personas pudieran mirar al futuro con esperanza.</p>
+    <div class="buttons"><a class="btn" href="#biografia">Conoce su historia</a><a class="btn secondary" href="#musica">Activar fanfarria</a></div>
+  </div>
+  <div class="hero-art" aria-label="Emblema gráfico inspirado en los colores del traje de All Might">
+    <div class="sunburst"></div><div class="emblem"><strong>AM</strong><small>PLUS ULTRA</small></div>
+  </div>
+</section>
+<section class="section light" id="biografia">
+  <div class="section-head"><div class="kicker">01 / Biografía</div><h2>Toshinori Yagi: detrás de la sonrisa</h2>
+  <p>All Might es el nombre heroico de Toshinori Yagi, antiguo héroe número uno y figura conocida como el Símbolo de la Paz en <em>My Hero Academia</em>.</p></div>
+  <div class="cards">
+    <article class="card"><h3>Un poder heredado</h3><p>Fue elegido por Nana Shimura para heredar <strong>One For All</strong>, un Don que acumula poder y puede transmitirse a otra persona. Toshinori se convirtió en su octavo portador.</p></article>
+    <article class="card"><h3>El héroe número uno</h3><p>Su fuerza extraordinaria y su presencia pública ayudaron a que la gente recuperara la confianza. Su sonrisa era parte de su compromiso: tranquilizar a quienes necesitaban ayuda.</p></article>
+    <article class="card"><h3>Un nuevo legado</h3><p>Tras sufrir heridas graves y agotar gran parte de su poder, conoció a Izuku Midoriya. En lugar de limitarse a ser un ídolo, se convirtió en su mentor y le confió One For All.</p></article>
+  </div>
+  <p class="note">La historia contiene detalles importantes de la trama. Personaje creado por Kōhei Horikoshi; esta página es un homenaje de fans y no es oficial.</p>
+</section>
+<section class="section blue" id="simbolo">
+  <div class="section-head"><div class="kicker">02 / Su filosofía</div><h2>¿Qué significa ser el Símbolo de la Paz?</h2>
+  <p>Para All Might, no bastaba con derrotar villanos. Un héroe debía hacer que la gente sintiera que no estaba sola. Su presencia transmitía seguridad y reducía el miedo, incluso antes de que comenzara una batalla.</p></div>
+  <div class="message"><h2>La fuerza también es una responsabilidad</h2><p>Ser un símbolo significa sostener la esperanza cuando otros sienten que la han perdido. Pero la historia también muestra el costo de fingir que uno siempre puede con todo: hasta el héroe más fuerte necesita reconocer sus límites, aceptar ayuda y preparar a quienes continuarán su labor.</p><p>Su legado no consiste solamente en ganar peleas. Consiste en inspirar a otras personas para que también se atrevan a proteger, ayudar y actuar.</p></div>
+</section>
+<section class="section" id="frases">
+  <div class="section-head"><div class="kicker">03 / Palabras que impulsan</div><h2>Frases y lecciones de héroe</h2><p>Algunas líneas breves del anime y otras ideas originales inspiradas en sus temas centrales.</p></div>
+  <div class="quote-grid">
+    <div class="quote"><blockquote>“¡Estoy aquí!”</blockquote><cite>All Might — una promesa de ayuda y seguridad.</cite></div>
+    <div class="quote"><blockquote>“Plus Ultra.”</blockquote><cite>Lema de la U.A.: ir más allá de los límites conocidos.</cite></div>
+    <div class="quote"><blockquote>“Puedes convertirte en un héroe.”</blockquote><cite>All Might a Izuku — el valor de reconocer el potencial de alguien.</cite></div>
+    <div class="quote"><blockquote>“El valor no es no tener miedo; es actuar para ayudar aun cuando existe.”</blockquote><cite>Reflexión original inspirada en la serie, no cita literal del anime.</cite></div>
+  </div>
+</section>
+<section class="section light" id="musica">
+  <div class="section-head"><div class="kicker">04 / Ambiente sonoro</div><h2>Una fanfarria para levantarse</h2><p>Activa una breve melodía heroica original, generada en tu navegador. Usa acordes brillantes y notas ascendentes para evocar una entrada triunfal; no es la banda sonora oficial del anime.</p></div>
+  <div class="music-panel">
+    <div><h3>Heroic Rise — fanfarria original</h3><p>Audio sintetizado · sin archivos externos · pulsa para reproducir o detener</p><button class="btn" id="musicToggle" type="button">▶ Reproducir fanfarria</button></div>
+    <div class="equalizer" id="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+  <p class="note">El navegador puede pedir una interacción antes de permitir audio. Ajusta el volumen de tu dispositivo.</p>
+</section>
+<section class="section blue">
+  <div class="message">
+    <div class="kicker">Tu turno</div><h2>Ser un héroe empieza en lo cotidiano</h2>
+    <p>No necesitas superpoderes ni una capa para marcar una diferencia. Puedes ser un héroe cuando defiendes a alguien que está siendo tratado injustamente, escuchas sin juzgar, admites un error, cumples una promesa o vuelves a intentarlo después de fallar.</p>
+    <p>La verdadera superación no consiste en ser invencible. Consiste en aprender, pedir ayuda cuando hace falta y usar lo que sabes hacer para mejorar la vida de alguien más. Da un paso, por pequeño que sea. Tu ejemplo también puede darle valor a otra persona.</p>
+  </div>
+</section>
+</main>
+<footer><strong>HERO ARCHIVE / ALL MIGHT</strong><br>Proyecto fan no oficial. <em>My Hero Academia</em> y sus personajes pertenecen a sus respectivos titulares. Las frases originales están señaladas como tales. <a href="https://heroaca.com/character/chara_group04/04-01/" target="_blank" rel="noopener noreferrer">Perfil oficial del personaje</a>.</footer>
+<script>
+(() => {
+  const button = document.getElementById('musicToggle');
+  const bars = document.getElementById('equalizer');
+  let ctx = null, timers = [], playing = false, master = null;
+  function stop(){
+    timers.forEach(clearTimeout); timers=[];
+    if(ctx){ try{master.gain.setTargetAtTime(0,ctx.currentTime,.04); setTimeout(()=>{if(ctx){ctx.close();ctx=null;master=null;}},180);}catch(e){} }
+    playing=false; button.textContent='▶ Reproducir fanfarria'; bars.classList.remove('playing');
+  }
+  function play(){
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if(!AudioContext){button.textContent='Audio no compatible';return;}
+    ctx = new AudioContext(); master=ctx.createGain(); master.gain.value=.12; master.connect(ctx.destination);
+    const start=ctx.currentTime+.08;
+    // Melodía original corta con timbre de campana/sintetizador.
+    const notes=[[523.25,0,.28],[659.25,.2,.28],[783.99,.4,.32],[1046.5,.64,.5],[783.99,1.02,.24],[880,1.2,.24],[1046.5,1.4,.3],[1318.51,1.66,.55],[1174.66,2.25,.24],[1046.5,2.47,.24],[880,2.69,.24],[1046.5,2.92,.75]];
+    notes.forEach(([freq,offset,duration],idx)=>{
+      const t=start+offset;
+      const osc=ctx.createOscillator(), gain=ctx.createGain();
+      osc.type=idx%3===0?'triangle':'sine'; osc.frequency.setValueAtTime(freq,t);
+      gain.gain.setValueAtTime(.0001,t); gain.gain.exponentialRampToValueAtTime(.7/(1+idx*.025),t+.025);
+      gain.gain.exponentialRampToValueAtTime(.0001,t+duration);
+      osc.connect(gain);gain.connect(master);osc.start(t);osc.stop(t+duration+.03);
+      const timer=setTimeout(()=>{},(offset+duration)*1000);timers.push(timer);
+    });
+    // Acordes de apoyo suaves.
+    [[261.63,0,1.5],[329.63,0,1.5],[392,0,1.5],[349.23,1.5,1.5],[440,1.5,1.5],[523.25,1.5,1.5]].forEach(([freq,offset,duration])=>{
+      const t=start+offset, osc=ctx.createOscillator(),gain=ctx.createGain();
+      osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,t);
+      gain.gain.linearRampToValueAtTime(.12,t+.12);gain.gain.setValueAtTime(.12,t+duration-.15);
+      gain.gain.linearRampToValueAtTime(.0001,t+duration);osc.connect(gain);gain.connect(master);osc.start(t);osc.stop(t+duration+.02);
+    });
+    playing=true;button.textContent='■ Detener fanfarria';bars.classList.add('playing');
+    timers.push(setTimeout(()=>{if(playing)stop();},3900));
+  }
+  button.addEventListener('click',()=>{if(playing)stop();else play();});
+})();
+</script>
+</body>
+</html>
